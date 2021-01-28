@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Condiment&family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pageOne {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background:url('https://i.ibb.co/9bnPgy6/bg.jpg');
+ /* background:url('https://images.unsplash.com/photo-1531167599833-609a45d3d903?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGRhcmslMjBzdGFpcnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');*/
+  /* background: url(https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDR8fGJhY2tncm91bmQlMjBzdGVwJTIwaW1hZ2VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pageOne .rowOne {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pageOne .rowOne h1 {
+  font-family: "Condiment", cursive;
+  font-size: 141px;
+  color: white;
+}
+
+.pageOne .rowOne button {
+  width: 267px;
+  height: 67px;
+  background: #ffffff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-weight:bold;
+}
+.pageOne .rowOne button:hover{
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25),
+  inset 2px 2px 20px rgba(0, 0, 0, 0.5);
+  cursor:pointer;
+}
+
+.pageOne .rowOne h3 {
+  height: 67px;
+  width: 78px;
+  font-family: "Poppins", cursive;
+  font-size: 30px;
+  line-height: 60px;
+  font-weight:bold;
+}
+
+
+.pageTwo{
+    height:100vh;
+    width:100%;
+    font-family:'Poppins', sans-serif;
+
+}
+.pageTwo .rowOne{
+    position:relative;
+    width:100%;
+    height:100%;
+
+}
+
+.pageTwo .rowOne .timerBox{
+    position:absolute;
+    width:471px;
+    height:300px;
+    border:2px solid black;
+    left:12px;
+    top:17px;
+}
+
+button:focus{
+  outline:none;
+  box-shadow: 0 0;
+  transform: scale(0.95);
+}
+ 
+/* this is for the modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  animation:animateModal .5s ease-in forwards;
+
+   
+   
+}
+
+/* Modal Content */
+.modal-content {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%;
+  font-family:Poppins;
+}
+
+/* The Close Button */
+.close {
+  color: #e22f2f;
+  color: #000;
+  float: right;
+  font-size: 38px;
+  font-weight: bold;
+  margin-left:7px;
+}
+
+.close:hover,
+.close:focus {
+  color: #e22f2f;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rules{
+  align-items: center;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:10px;
+   
+}
+.rules h1{
+  position: relative;
+}
+.rules h1:before{
+  content: " ";
+  position: absolute;
+  width:50px;
+  height:5px;
+  bottom:0px;
+  left:10px;
+  
+  background:#54D9F7;
+  border-radius:10px;
+}
+.list{
+  padding:10px ;
+  margin-left:20px;
+  font-size:24px;
+  word-spacing:6px;
+  font-family: 'Dancing Script', cursive;
+}
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #CCC url('./245 (1).gif') no-repeat center center;
+}
+
+
+.modalClose{
+
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation:animateModalclose .5s ease-in forwards;
+  
+     
+     
+
+}
+
+.fa{
+  position :relative;
+  left:50px;
+  height:50px;
+}
+
+@keyframes animateModal{
+  0%{
+    transform:scale(0)
+  }
+  100%{
+    transform:scale(1);
+  }
+}
+@keyframes animateModalclose{
+  0%{
+    transform:scale(1);
+
+  }
+  100%{
+    transform:scale(0);
+   
+  }
+}
+#content{
+  display:none;
+}
+
+.loader {
+  width: 10em;
+  height: 10em;
+  font-size: 25px;
+  box-sizing: border-box;
+  border-top: 0.3em solid hotpink;
+  border-radius: 50%;
+  position: relative;
+  animation: rotating 2s ease-in-out infinite;
+  --direction: 1;
+  z-index: 99999;
+  
+   
+}
+#loading{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+  display: default;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  box-sizing: border-box;
+  top: -0.2em;
+}
+
+.loader::before {
+  border-top: 0.3em solid dodgerblue;
+  transform: rotate(120deg);
+}
+
+.loader::after {
+  border-top: 0.3em solid gold;
+  transform: rotate(240deg);
+}
+
+.loader span {
+  position: absolute;
+  color: white;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 10em;
+  font-family: sans-serif;
+  animation: rotating 2s linear infinite;
+  --direction: -1;
+}
+
+@keyframes rotating {
+  50% {
+      transform: rotate(calc(180deg * var(--direction)));
+  }
+
+  100% {
+      transform: rotate(calc(360deg * var(--direction)));
+  }
+}
+
+
+/*Responsive*/
+
+@media (max-width : 678px) {
+  .pageOne .rowOne h1 {
+    font-size:120px;
+  }
+}
+@media (max-width : 558px) {
+  .pageOne .rowOne h1 {
+    font-size:90px;
+  }
+}
+@media (max-width : 360px) {
+  .pageOne .rowOne h1 {
+    font-size:75px;
+  }
+}
+@media (max-width : 297px) {
+  .pageOne .rowOne button {
+    width:210px;
+    height:50px;
+    font-size:25px;
+  }
+  .pageOne .rowOne h1 {
+    font-size:58px;
+  }
+}
+@media (max-width : 868px){
+.modal-content h1{
+ font-size: 20px;
+}
+}

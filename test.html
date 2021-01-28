@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+</head>
+<body>
+
+    <div class="outer-div">
+
+        <div class="content-div">
+            <div class="inner-div">
+
+                <img src="./coir.png" alt="">
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<style>
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        background-color:yellow;
+        /* display:flex;
+        justify-content:center;
+        align-items:center; */
+        height:100vh;
+    }
+
+
+    .outer-div{
+        position:relative;
+        height:500px;
+        width:500px;
+        background-color:purple;
+        margin-left:50px;
+        top:50px;
+
+    }
+    .content-div{
+        position:absolute;
+        height:300px;
+        width:300px;
+        background-color:orange;
+        margin-left:50px;
+        top:50px;
+    }
+    .inner-div{
+        position:absolute;
+        top:50px;
+        height:100px;
+        margin-left:50px;
+        width:100px;
+        background-color:cadetblue;
+    }
+
+    .inner-div img{
+        height:100px;
+        widows: 100px;
+        position:absolute;
+        display:block;
+        margin-left:0px;
+    }
+   
+</style>
+</html>

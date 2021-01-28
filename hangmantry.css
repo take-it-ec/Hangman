@@ -1,0 +1,707 @@
+@import url("https://fonts.googleapis.com/css2?family=Condiment&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.inputans {
+  left: 10px;
+  border-width: 0 0 36px 0;
+  border-bottom: 4px solid #54d9f7;
+  margin: 8px;
+  width: 38px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.btnBox {
+  padding: 15px 11px;
+  width: 648px;
+  height: 191px;
+  background: #fff;
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  box-shadow: 2px 2px 2px #fff, inset 2px 2px 6px #fff;
+  border-radius: 20px;
+  margin-left: 30px;
+}
+
+.btnBoxwin {
+  animation: borderwin 0.5s ease;
+  border: 1px solid #0aab41;
+  box-shadow: 2px 2px 2px #0aab41, inset 2px 2px 6px #0aab41;
+}
+@keyframes borderwin {
+  from {
+    border: 1px solid #0aab41;
+    box-shadow: 2px 2px 2px #0aab41, inset 2px 2px 6px #0aab41;
+  }
+  to {
+    border: none;
+  }
+}
+
+/*       ----------------
+when right answer
+   border: 1px solid #0AAB41;
+    box-shadow: 2px 2px 2px #0AAB41, inset 2px 2px 6px #0AAB41;
+
+
+    when wrong answer
+     border: 1px solid #DC0C18;
+    box-shadow: 2px 2px 2px #DC0C18, inset 2px 2px 6px #DC0C18;
+*/
+.alpha {
+  margin: 5px;
+  border: none;
+  align-items: center;
+  padding: 0px 16px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+  width: 48px;
+  height: 45px;
+  background: #3a3a3a;
+  border-radius: 7px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 45px;
+  color: #ffffff;
+  outline: none;
+}
+
+.alpha:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+
+.alpha:active,
+.alpha:focus {
+  background-color: #333;
+  box-shadow: 0 0;
+  transform: scale(0.95);
+}
+
+.first {
+  position: relative;
+}
+
+.second {
+  position: relative;
+  left: 24px;
+}
+.third {
+  position: relative;
+  left: 56px;
+}
+
+.clickme {
+  border: none;
+  border-bottom: solid 2px cyan;
+}
+.yourWord {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.yourWord h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 72px;
+  margin: 0 auto;
+}
+#app {
+  z-index: 2;
+}
+.timerBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-left: 100px;
+}
+
+.timerBox .namespan {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 280px;
+
+  /* margin-top: 50px;
+  text-align: center;
+  margin-left: 268px; */
+}
+.btnHeading {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+.btnHeading h1 {
+  left: 160px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.hangCoir {
+  position: absolute;
+  right: 60px;
+  top: -100px;
+  width: 200px;
+  height: 285px;
+}
+.hangCoir img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  z-index: -1;
+}
+.head {
+  position: absolute;
+  bottom: 33px;
+  left: 67px;
+  /* left: 300px; */
+  /* transform:translateX(300px); */
+  transform: scale(0);
+  transition: all 1s ease;
+}
+.body {
+  position: absolute;
+  /* left: 300px; */
+  /* transform:translateX(300px); */
+  transition: all 1s ease;
+  transform: scale(0);
+
+  left: 50px;
+  bottom: -140px;
+}
+.hand1 {
+  position: absolute;
+  /* left: 300px; */
+  transform: scale(0);
+
+  /* transform:translateX(300px); */
+  transition: all 1s ease;
+  left: 28px;
+  bottom: -157px;
+}
+.hand2 {
+  position: absolute;
+  left: 120px;
+  /* left: 300px; */
+  transform: scale(0);
+
+  /* transform:translateX(300px); */
+  transition: all 1s ease;
+
+  bottom: -135px;
+}
+.leg1 {
+  position: absolute;
+  left: 72px;
+  /* left: 300px; */
+  transform: scale(0);
+  /* transform:translateX(300px); */
+  transition: all 1s ease;
+
+  bottom: -315px;
+  z-index: 1;
+}
+.leg2 {
+  position: absolute;
+  left: 85px;
+  /* left: 300px; */
+  transform: scale(0);
+  /* transform:translateX(300px); */
+  transition: all 1s ease;
+
+  bottom: -335px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  z-index: 1000;
+  background: url("./GameOver.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-blend-mode: screen; */
+
+  opacity: 95%;
+}
+
+.overlay-win {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  z-index: 1000;
+  background: url("./YouWin.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-blend-mode: screen; */
+  opacity: 87%;
+}
+
+.overlay .overlay-inner,
+.overlay-win .overlay-inner-win {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay .overlay-inner button,
+.overlay-win .overlay-inner-win button {
+  width: 267px;
+  height: 67px;
+  background: #ffffff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  z-index: 5;
+}
+
+.overlay .overlay-inner button:hover,
+.overlay-win .overlay-inner-win button:hover {
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0;
+  transform: scale(0.95);
+}
+
+input:disabled{
+  background-color:white;
+}
+
+/*Responsive*/
+
+@media (max-width: 1300px) {
+  .inputans {
+    position: relative;
+    left: -80px;
+    z-index: 100;
+    left: -200px;
+  }
+}
+@media (max-width: 1100px) {
+  .inputans {
+    position: relative;
+    left: -200px;
+    z-index: 100;
+  }
+}
+
+@media (max-width: 1055px) {
+  .hangCoir img {
+    position: relative;
+  }
+  .hangCoir svg {
+    position: absolute;
+  }
+  .inputans {
+    border-width: 0 0 22px 0;
+    border-bottom: 4px solid #54d9f7;
+    margin: 8px;
+    width: 22px;
+    left: -140px;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+}
+@media (max-width: 989px) {
+  .hangCoir svg {
+    position: absolute;
+  }
+  .inputans {
+    border-width: 0 0 22px 0;
+    border-bottom: 4px solid #54d9f7;
+    margin: 8px;
+    width: 22px;
+    left: -140px;
+  }
+  .btnBox {
+    position: relative;
+    top: 90px;
+    z-index: 100;
+    padding: 12px 9px;
+    width: 640px;
+    height: 170px;
+  }
+  .btnHeading {
+    position: relative;
+    top: 90px;
+  }
+}
+
+@media (max-width: 914px) {
+  .btnBox {
+    position: relative;
+    top: 90px;
+    z-index: 100;
+    padding: 12px 9px;
+    width: 640px;
+    height: 170px;
+  }
+  .btnHeading {
+    position: relative;
+    top: 90px;
+  }
+  .hangCoir img {
+    position: relative;
+
+    height: 192px;
+    left: 60px;
+  }
+}
+@media (max-width: 840px) {
+  .btnBox {
+    width: 636px;
+    height: 150px;
+    padding: 10px 7px;
+    position: relative;
+    top: 110px;
+  }
+  .btnHeading {
+    position: relative;
+    top: 110px;
+  }
+  .hangCoir img {
+    position: relative;
+    top: 200px;
+    height: 170px;
+    left: 90px;
+  }
+  .inputans {
+    position: relative;
+    left: -170px;
+    bottom: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    /* background-color:aqua; */
+    background-color: white;
+    overflow: hidden;
+  }
+  .btnHeading {
+    font-size: 13px;
+  }
+  .inputans {
+    line-height: 20px;
+    padding-left: 0;
+  }
+  .btnBox {
+    margin: 0 auto;
+    padding-left: 100px;
+    margin-bottom: 20px;
+  }
+  .alpha {
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    padding: 0;
+    line-height: 20px;
+  }
+  .namespan {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -20px;
+  }
+  .namespan .inputans {
+    top: 10px;
+    left: -400px;
+    z-index: 952;
+  }
+
+  .hangCoir img {
+    width: 120px;
+    height: 150px;
+    top: 0px;
+  }
+  .head {
+    top: 95px;
+    left: 130px;
+    transform: scale(0);
+    z-index: 950;
+    height: 40px;
+    width: 40px;
+  }
+  .body {
+    transform: scale(0);
+    height: 105px;
+    width: 105px;
+    top: 140px;
+    z-index: 950;
+    left: 100px;
+  }
+  .hand1 {
+    transform: scale(0);
+    height: 90px;
+    width: 90px;
+    top: 155px;
+    left: 70px;
+  }
+  .hand2 {
+    height: 90px;
+    width: 90px;
+    left: 140px;
+    top: 145px;
+    z-index: 951;
+    /* transform:rotate(-10deg); */
+    transform: scale(0);
+  }
+  .leg1 {
+    transform: scale(0);
+    height: 130px;
+    width: 140px;
+    left: 90px;
+    top: 245px;
+    z-index: 950;
+  }
+  .leg2 {
+    transform: scale(0);
+    height: 40px;
+    width: 40px;
+    top: 350px;
+    left: 130px;
+    z-index: 900;
+  }
+}
+
+@media (max-width: 700px) {
+  .btnBox {
+    padding-left: 50px;
+    width: 80%;
+    position: relative;
+    margin-top: 0;
+  }
+  .overlay-win,
+  .overlay {
+    z-index: 1000;
+  }
+}
+@media (max-width: 650px) {
+  .btnBox {
+    padding-left: 40px;
+  }
+}
+
+/*for tablets*/
+@media (max-width: 611px) {
+  .alpha {
+    height: 25px;
+    width: 27px;
+    font-size: 13px;
+    padding: 0;
+
+    line-height: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+  .btnBox {
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    background-color: white;
+  }
+
+  .btnHeading {
+    top: -20px;
+    /* left: -40px; */
+    left: -100px;
+    font-size: 12px;
+  }
+  .btnHeading h1 {
+    margin: 0 auto;
+  }
+
+  .btnBox {
+    padding: 0;
+    width: 95%;
+    height: 100px;
+    top: 0px;
+    position: relative;
+    margin: 0 auto;
+    margin-left: 0px;
+    padding: 0 auto;
+    padding-right: 0px;
+  }
+
+  .alpha {
+    width: 20px;
+    height: 22px;
+    font-size: 12px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    margin-left: 5px;
+  }
+
+  .alpha:active,
+  .alpha:focus {
+    color: #333;
+    box-shadow: 0 0;
+    transform: scale(0.95);
+  }
+
+  .timerBox {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* background-color: yellow; */
+  }
+  .timerBox .namespan {
+    width: 100%;
+    margin-bottom: 200px;
+    left: 260px;
+    height: 40px;
+    width: 10%;
+    background-color: purple;
+    margin-left:300px;
+  }
+
+  .inputans {
+    text-align: center;
+    left: 50px;
+  }
+
+  .hangCoir {
+    position: absolute;
+    top: 50px;
+    height: 100%;
+    width: 100px;
+    /* background-color: red; */
+    left: 290px;
+  }
+
+  .hangCoir img {
+    position: absolute;
+    display: block;
+    left: -2px;
+    top: 80px;
+    z-index: 900;
+    height: 100px;
+    width: 70px;
+  }
+
+  .head {
+    position: absolute;
+    left: 20px;
+    top: 145px;
+    /* transform:scale(1); */
+    width: 25px;
+    height: 25px;
+    /* left: 190px; */
+  }
+  .body {
+    /* left: 160px; */
+    /* transform:scale(1); */
+    position: absolute;
+    left: 0px;
+    top: 175px;
+    width: 70px;
+    height: 70px;
+  }
+  .hand1 {
+    /* left: 130px; */
+    /* transform:scale(1); */
+    position: absolute;
+    left: -18px;
+    top: 185px;
+    height: 60px;
+    width: 60px;
+  }
+  .hand2 {
+    /* left: 200px; */
+    /* transform:scale(1); */
+    position: absolute;
+    left: 28px;
+    height: 60px;
+    width: 60px;
+    top: 181px;
+  }
+  .leg1 {
+    /* left: 150px; */
+    /* transform:scale(1); */
+    position: absolute;
+    height: 85px;
+    width: 85px;
+    left: -6px;
+  }
+  .leg2 {
+    /* left: 190px; */
+    position: absolute;
+    /* transform:scale(1); */
+    left: 17px;
+    height: 25px;
+    width: 25px;
+    top: 317px;
+  }
+
+  .second,
+  .third,
+  .first {
+    left: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+/* keep this style at the most bottom always */
+@media (min-width: 300px) {
+  body,
+  html {
+    overflow: hidden;
+  }
+}
